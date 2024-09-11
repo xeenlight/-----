@@ -98,7 +98,7 @@ nav button{
   background-color: black; 
   color: white; 
 } 
-.movieTatle{ 
+.movieTitle{ 
   text-align: center; 
   margin-bottom: 10px; 
 } 
@@ -186,4 +186,7 @@ background-color:rgba(50, 50, 50, 0.5);
 } 
 .dark .darckBg{ 
 background-color:rgba(10, 10, 10, 0.5); 
+}
+.main{
+  display: none;
 }
