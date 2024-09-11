@@ -1,4 +1,3 @@
-// Theme Change
 let changeThemeBtn = document.querySelector(".themeChange");
 let body = document.querySelector("body");
 
@@ -21,7 +20,6 @@ function changeTheme() {
   }
 }
 
-// Movie Search
 let searchBtn = document.querySelector(".search button");
 searchBtn.addEventListener("click", searchMovie);
 
@@ -40,7 +38,7 @@ async function searchMovie() {
   let searchText = document.querySelector(".search input").value;
   console.log(searchText);
 
-  let response = await sendRequest("http://www.omdbapi.com/", "GET", {
+  let response = await sendRequest("https://www.omdbapi.com/", "GET", {
     "apikey": "e27bb7cc",
     "t": searchText
   });
@@ -49,8 +47,8 @@ async function searchMovie() {
     loader.style.display = "none";
     alert(response.Error);
   } else {
-    let main = document.querySelector(".main")
-    main.style.display = "block"
+    let main = document.querySelector(".main");
+    main.style.display = "block";
     
     let movieTitle = document.querySelector(".movieTitle h2");
     movieTitle.innerHTML = response.Title;
@@ -58,17 +56,17 @@ async function searchMovie() {
     let movieIMG = document.querySelector(".movieIMG");
     movieIMG.style.backgroundImage = `url(${response.Poster})`;
 
-    let dataList = ["Actors", "Awards", "Country", "Director", "Genre", "Language", "Plot", "Released", "Runtime", "Type", "Writer", "imdbRating"]
-    let movieInfo = document.querySelector(".movieInfo")
-    movieInfo.innerHTML = ""
+    let dataList = ["Actors", "Awards", "Country", "Director", "Genre", "Language", "Plot", "Released", "Runtime", "Type", "Writer", "imdbRating"];
+    let movieInfo = document.querySelector(".movieInfo");
+    movieInfo.innerHTML = "";
 
     for(let i = 0; i < dataList.length; i++){
-      let param = dataList[i]
+      let param = dataList[i];
       let desc = `<div class="desc darckBg"> 
                     <div class="title">${param}</div> 
                     <div class="value">${response[param]}</div> 
-                 </div> `
-      movieInfo.innerHTML = movieInfo.innerHTML + desc
+                 </div>`;
+      movieInfo.innerHTML = movieInfo.innerHTML + desc;
       loader.style.display = "none";
     }
   }
@@ -98,3 +96,4 @@ async function sendRequest(url, method, data) {
     return responseData;
   }
 }
+

@@ -190,3 +190,9 @@ background-color:rgba(10, 10, 10, 0.5);
 .main{
   display: none;
 }
+.similarMovieTitle{
+  display: none;
+}
+.similarMovie{
+  display: none;
+}
