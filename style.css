@@ -131,7 +131,7 @@ nav button{
 .title{ 
   font-weight: 700; 
 } 
-.similarMovieTitle{ 
+.similarMovieTitle h2{ 
   text-align: center; 
   margin-bottom: 10px; 
 } 
@@ -190,9 +190,29 @@ background-color:rgba(10, 10, 10, 0.5);
 .main{
   display: none;
 }
-.similarMovieTitle{
+.similarMovieTitle h2{
   display: none;
 }
 .similarMovie{
   display: none;
+}
+.favStar.active {
+  filter: invert(21%) sepia(86%) saturate(2811%) hue-rotate(1deg) brightness(103%) contrast(101%);
+}
+
+.favStar {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: var(--color1);
+
+  background-image: url('../img/favBtn.svg');
+  background-size: 35px;
+  background-position: top 5px left 5px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  filter: invert(1);
+  cursor: pointer;
 }
