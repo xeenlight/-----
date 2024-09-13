@@ -197,22 +197,23 @@ background-color:rgba(10, 10, 10, 0.5);
   display: none;
 }
 .favStar.active {
-  filter: invert(21%) sepia(86%) saturate(2811%) hue-rotate(1deg) brightness(103%) contrast(101%);
+  filter: invert(1) sepia(1) saturate(10) hue-rotate(-45deg); 
 }
 
 .favStar {
-  width: 45px;
-  height: 45px;
-  border-radius: 5px;
+  background-color:rgba(200, 200, 200, 0.8); 
+  padding: 5px; 
+  border-radius: 3px; 
+  width: 40px; 
+  height: 40px; 
   background-color: var(--color1);
-
-  background-image: url('../img/favBtn.svg');
+  background-image: url('./img/favBtn.svg');
   background-size: 35px;
   background-position: top 5px left 5px;
   background-repeat: no-repeat;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 10px; 
+  left: 10px; 
   filter: invert(1);
   cursor: pointer;
 }
